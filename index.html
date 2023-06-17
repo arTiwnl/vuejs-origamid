@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+</head>
+<body>
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+      <div id="app">
+        {{nome}}, {{idade}}, {{faculdade.possui}}
+    </div>
+
+      <script>
+
+             const { createApp } = Vue;
+
+                createApp({
+                data() {
+                    return {
+                    nome: "Arthur Carvalho",
+                    idade: 19,
+                    faculdade: {
+                        possui: "Em Andamento",
+                        curso: "ADS"
+                    }
+                    };
+                },
+                }).mount("#app");
+      </script>
+</body>
+</html>
